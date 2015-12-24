@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<!--
+	## for client-side less
+	<link rel="stylesheet/less" type="text/css" href="http://wiki.chann.kr/theme/css/style.less">
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/less.js/1.7.3/less.min.js" type="text/javascript"></script>
+	-->
+	<link rel="stylesheet" type="text/css" href="http://wiki.chann.kr/theme/css/style.css">
+	<link rel="stylesheet" type="text/css" href="http://wiki.chann.kr/theme/css/pygments.css">
+	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=PT+Sans|PT+Serif|PT+Mono">
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="CHANN">
+	<meta name="description" content="Posts and writings by CHANN">
+
+	<link href="http://wiki.chann.kr/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="CHANN Wiki Atom" />
+
+<meta name="keywords" content="">
+
+	<title>
+		CHANN Wiki
+&ndash; Pelican에서 글 쓰는 법	</title>
+
+</head>
+
+<body>
+	<aside>
+		<div id="user_meta">
+			<a href="http://wiki.chann.kr">
+				<img src="http://wiki.chann.kr/theme/images/logo.png" alt="logo" style="width:100px;height:100px;">
+			</a>
+			<h2><a href="http://wiki.chann.kr">CHANN</a></h2>
+			<p></p>
+			<ul>
+				<li><a href="/categories">카테고리</a></li>
+				<li><a href="/tags">태그</a></li>
+				<li><a href="/archives">아카이브</a></li>
+				<li><a href="http://blog.chann.kr" target="_blank">Blog</a></li>
+				<li><a href="https://chann.kr" target="_blank">Resume</a></li>
+				<li><a href="https://github.com/channprj" target="_blank">Github</a></li>
+				<li><a href="https://twitter.com/chann_kr" target="_blank">Twitter</a></li>
+				<li><a href="https://fb.com/channprj" target="_blank">Facebook</a></li>
+			</ul>
+		</div>
+	</aside>
+
+	<main>
+		<header>
+			<p>
+			<a href="http://wiki.chann.kr">Index</a> &brvbar; <a href="http://wiki.chann.kr/archives.html">Archives</a>
+			&brvbar; <a href="http://wiki.chann.kr/feeds/all.atom.xml">Atom</a>
+			</p>
+		</header>
+
+<article>
+  <div class="article_title">
+    <h3><a href="http://wiki.chann.kr/pelican/how-to-write-on-pelican">Pelican에서 글 쓰는 법</a></h3>
+  </div>
+  <div class="article_text">
+    <p>Pelican에서 글을 쓰는 건 간단하다.</p>
+<h2>작성법</h2>
+<div class="highlight"><pre>├── LICENSE
+├── Makefile
+├── __pycache__
+│   └── pelicanconf.cpython-34.pyc
+│
+├── content  <span class="c"># 이 폴더 안에 다음과 같이 xxx.md(마크다운) 파일을 넣자</span>
+│   ├── about.md
+│   ├── hello.md
+│   └── how-to-write.md
+│
+├── develop_server.sh
+├── fabfile.py
+├── pelicanconf.py
+├── pelicanconf.pyc
+├── publishconf.py
+├── publishconf.pyc
+│
+└── output  <span class="c"># 이 폴더가 바로 github page에 동기화되어야 할 폴더</span>
+</pre></div>
+
+
+<p>Pelican을 사용할 때 명시해야 할 형식은 아래와 같다.</p>
+<div class="highlight"><pre><span class="n">Title</span><span class="o">:</span>  <span class="err">제목을</span> <span class="err">적으면</span> <span class="err">된다</span>
+<span class="n">Date</span><span class="o">:</span> <span class="mi">2015</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="mi">18</span> <span class="mi">17</span><span class="o">:</span><span class="mi">27</span>
+<span class="n">Category</span><span class="o">:</span> <span class="err">카테고리를</span> <span class="err">적으면</span> <span class="err">된다</span>
+
+<span class="err">그리고</span> <span class="err">여기에</span> <span class="err">내용을</span> <span class="err">적으면</span> <span class="err">된다</span><span class="o">.</span>
+</pre></div>
+
+
+<p>내용에서의 마크다운 문법은 Git-Flavored Markdown  의 형식을 준수하면 된다.</p>
+<p>파일 제목을 영어로 작성하자. 한글로 작성시 오류가 날 확률이 있다.</p>
+<hr />
+<h2>Github Pages에 업로드하기</h2>
+<p>단순하니 아래의 명령어를 참고하자.</p>
+<div class="highlight"><pre><span class="c"># 펠리칸으로 빌드를 하고</span>
+<span class="nv">$ </span>pelican content
+
+<span class="c"># output 폴더로 가서</span>
+<span class="nv">$ </span><span class="nb">cd </span>output
+
+<span class="c"># 커밋을 하고 푸시한다</span>
+<span class="nv">$ </span>git add .
+<span class="nv">$ </span>git commit -m <span class="s2">&quot;커밋 메시지&quot;</span>
+<span class="nv">$ </span>git push origin master
+</pre></div>
+
+
+<p>좀 더 편리한 방법으로 Travis-CI를 연결하여 자동으로 푸시되게 하는 방법이 있는데, 이 부분은 나중에 작성할 예정이다.</p>
+<p>현재 upload.sh 파일을 작성하여 위의 과정을 쉘 스크립트로 자동화시켜놓았다.
+Travis와 연동하면 의미없는 짓이긴 하지만... 당장 바로 써먹을 땐 무식하게 돌아가도록 짜는 것도.... 생각보다 그리 나쁘진 않다. (...)</p>
+  </div>
+  <div class="article_meta">
+    <p>Posted on: 수 18 11월 2015</p>
+    <p>Category: <a href="http://wiki.chann.kr/pelican/index">Pelican</a>
+    </p>
+  </div>
+
+
+</article>
+
+
+		<div id="ending_message">
+			<p>&copy; CHANN. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>. Theme by Giulio Fidente on <a href="https://github.com/gfidente/pelican-svbhack" target="_blank">github</a>. </p>
+		</div>
+	</main>
+</body>
+</html>

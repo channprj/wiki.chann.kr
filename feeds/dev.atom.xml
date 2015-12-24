@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>CHANN Wiki</title><link href="http://wiki.chann.kr/" rel="alternate"></link><link href="http://wiki.chann.kr/feeds/dev.atom.xml" rel="self"></link><id>http://wiki.chann.kr/</id><updated>2015-12-10T20:00:00+09:00</updated><entry><title>django 정적 페이지 만드는 법</title><link href="http://wiki.chann.kr/dev/django-static-page-guide" rel="alternate"></link><updated>2015-12-10T20:00:00+09:00</updated><author><name>CHANN</name></author><id>tag:wiki.chann.kr,2015-12-10:dev/django-static-page-guide</id><summary type="html">&lt;!--Summary: --&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;작성중입니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;django에서 정적 페이지를 만들 땐 아래의 문서를 참조하자.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://docs.djangoproject.com/en/1.9/ref/contrib/flatpages/"&gt;django 1.9 버전 공식 문서&lt;/a&gt;&lt;/p&gt;</summary><category term="dev"></category><category term="python"></category><category term="django"></category><category term="server"></category></entry></feed>

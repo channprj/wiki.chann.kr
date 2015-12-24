@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>CHANN Wiki</title><link href="http://wiki.chann.kr/" rel="alternate"></link><link href="http://wiki.chann.kr/feeds/about.atom.xml" rel="self"></link><id>http://wiki.chann.kr/</id><updated>2015-12-25T00:00:00+09:00</updated><entry><title>About</title><link href="http://wiki.chann.kr/about/about" rel="alternate"></link><updated>2015-12-25T00:00:00+09:00</updated><author><name>CHANN</name></author><id>tag:wiki.chann.kr,2015-12-25:about/about</id><summary type="html">&lt;blockquote&gt;
+&lt;p&gt;조만간 이 곳으로 블로그를 옮길까 합니다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;안녕하세요. CHANN 입니다.&lt;/p&gt;
+&lt;p&gt;대학교에서는 컴퓨터정보와 뇌 및 인지과학을 전공하였습니다.
+HCI, 디자인, UX, IoT 등 관심을 두는 분야가 많지만 이 중 제대로 아는 건 하나도 없습니다.&lt;/p&gt;
+&lt;p&gt;블로그를 시작하게 된 계기 가 궁금하시다면 이 글을 읽어주세요.&lt;/p&gt;
+&lt;p&gt;게시물은 되도록 링크 공유나 인용을 해주시면 감사하겠습니다.
+전문을 그대로 재배포하지는 말아주세요.&lt;/p&gt;
+&lt;p&gt;이 블로그는 Python Pelican 3.6.4을 사용하여 Github Pages에 올려서 운영하고 있습니다.&lt;/p&gt;
+&lt;p&gt;Travis-ci와 연동하여 &lt;a href="https://github.com/channprj/channprj.github.io-source"&gt;Github 저장소&lt;/a&gt;에 푸시가 되면 &lt;a href="https://github.com/channprj/channprj.github.io"&gt;Github  Pages&lt;/a&gt;에 자동으로 빌드하고 푸시합니다.&lt;/p&gt;</summary><category term="about"></category><category term="pelican"></category><category term="github"></category><category term="github pages"></category><category term="introduction"></category><category term="miscellany"></category></entry></feed>

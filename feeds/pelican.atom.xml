@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>CHANN Wiki</title><link href="http://wiki.chann.kr/" rel="alternate"></link><link href="http://wiki.chann.kr/feeds/pelican.atom.xml" rel="self"></link><id>http://wiki.chann.kr/</id><updated>2015-11-21T22:20:00+09:00</updated><entry><title>Pelican 설치 가이드</title><link href="http://wiki.chann.kr/pelican/how-to-install-pelican" rel="alternate"></link><updated>2015-11-21T22:20:00+09:00</updated><author><name>CHANN</name></author><id>tag:wiki.chann.kr,2015-11-21:pelican/how-to-install-pelican</id><summary type="html">&lt;blockquote&gt;
+&lt;p&gt;작성중&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;CHANN@CHANN-Macbook:~/git/channprj.github.io&lt;span class="o"&gt;(&lt;/span&gt;master○&lt;span class="o"&gt;)&lt;/span&gt; » git config user.name &lt;span class="s2"&gt;&amp;quot;channprj&amp;quot;&lt;/span&gt;
+CHANN@CHANN-Macbook:~/git/channprj.github.io&lt;span class="o"&gt;(&lt;/span&gt;master○&lt;span class="o"&gt;)&lt;/span&gt; » git config user.email &lt;span class="s2"&gt;&amp;quot;chann@chann.kr&amp;quot;&lt;/span&gt;
+CHANN@CHANN-Macbook:~/git/channprj.github.io&lt;span class="o"&gt;(&lt;/span&gt;master○&lt;span class="o"&gt;)&lt;/span&gt; » pelican-quickstart
+Welcome to pelican-quickstart v3.6.3.
+
+This script will &lt;span class="nb"&gt;help &lt;/span&gt;you create a new Pelican-based website.
+
+Please answer the following questions so this script can generate the files
+needed by Pelican.
+
+
+&amp;gt; Where &lt;span class="k"&gt;do&lt;/span&gt; you want to create your new web site? &lt;span class="o"&gt;[&lt;/span&gt;.&lt;span class="o"&gt;]&lt;/span&gt;
+&amp;gt; What will be the title of this web site? GIT TO GEEK
+&amp;gt; Who will be the author of this web site? CHANN
+&amp;gt; What will be the default language of this web site? &lt;span class="o"&gt;[&lt;/span&gt;en&lt;span class="o"&gt;]&lt;/span&gt; ko
+&amp;gt; Do you want to specify a URL prefix? e.g., http://example.com   &lt;span class="o"&gt;(&lt;/span&gt;Y/n&lt;span class="o"&gt;)&lt;/span&gt; y
+&amp;gt; What is your URL prefix? &lt;span class="o"&gt;(&lt;/span&gt;see above example&lt;span class="p"&gt;;&lt;/span&gt; no trailing slash&lt;span class="o"&gt;)&lt;/span&gt; http://git.chann.kr
+&amp;gt; Do you want to &lt;span class="nb"&gt;enable &lt;/span&gt;article pagination? &lt;span class="o"&gt;(&lt;/span&gt;Y/n&lt;span class="o"&gt;)&lt;/span&gt; y
+&amp;gt; How many articles per page &lt;span class="k"&gt;do&lt;/span&gt; you want? &lt;span class="o"&gt;[&lt;/span&gt;10&lt;span class="o"&gt;]&lt;/span&gt;
+&amp;gt; What is your &lt;span class="nb"&gt;time &lt;/span&gt;zone? &lt;span class="o"&gt;[&lt;/span&gt;Europe/Paris&lt;span class="o"&gt;]&lt;/span&gt; Asia/Seoul
+&amp;gt; Do you want to generate a Fabfile/Makefile to automate generation and publishing? &lt;span class="o"&gt;(&lt;/span&gt;Y/n&lt;span class="o"&gt;)&lt;/span&gt; y
+&amp;gt; Do you want an auto-reload &lt;span class="p"&gt;&amp;amp;&lt;/span&gt; simpleHTTP script to assist with theme and site development? &lt;span class="o"&gt;(&lt;/span&gt;Y/n&lt;span class="o"&gt;)&lt;/span&gt; y
+&amp;gt; Do you want to upload your website using FTP? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; n
+&amp;gt; Do you want to upload your website using SSH? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; n
+&amp;gt; Do you want to upload your website using Dropbox? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; n
+&amp;gt; Do you want to upload your website using S3? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; n
+&amp;gt; Do you want to upload your website using Rackspace Cloud Files? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; n
+&amp;gt; Do you want to upload your website using GitHub Pages? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; y
+&amp;gt; Is this your personal page &lt;span class="o"&gt;(&lt;/span&gt;username.github.io&lt;span class="o"&gt;)&lt;/span&gt;? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; y
+Done. Your new project is available at /Users/CHANN/git/channprj.github.io
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="pelican"></category><category term="tutorial"></category><category term="github"></category></entry><entry><title>Pelican에서 글 쓰는 법</title><link href="http://wiki.chann.kr/pelican/how-to-write-on-pelican" rel="alternate"></link><updated>2015-11-18T17:27:00+09:00</updated><author><name>CHANN</name></author><id>tag:wiki.chann.kr,2015-11-18:pelican/how-to-write-on-pelican</id><summary type="html">&lt;p&gt;Pelican에서 글을 쓰는 건 간단하다.&lt;/p&gt;
+&lt;h2&gt;작성법&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;├── LICENSE
+├── Makefile
+├── __pycache__
+│   └── pelicanconf.cpython-34.pyc
+│
+├── content  &lt;span class="c"&gt;# 이 폴더 안에 다음과 같이 xxx.md(마크다운) 파일을 넣자&lt;/span&gt;
+│   ├── about.md
+│   ├── hello.md
+│   └── how-to-write.md
+│
+├── develop_server.sh
+├── fabfile.py
+├── pelicanconf.py
+├── pelicanconf.pyc
+├── publishconf.py
+├── publishconf.pyc
+│
+└── output  &lt;span class="c"&gt;# 이 폴더가 바로 github page에 동기화되어야 할 폴더&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Pelican을 사용할 때 명시해야 할 형식은 아래와 같다.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;Title&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;  &lt;span class="err"&gt;제목을&lt;/span&gt; &lt;span class="err"&gt;적으면&lt;/span&gt; &lt;span class="err"&gt;된다&lt;/span&gt;
+&lt;span class="n"&gt;Date&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;2015&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;11&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;18&lt;/span&gt; &lt;span class="mi"&gt;17&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;27&lt;/span&gt;
+&lt;span class="n"&gt;Category&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="err"&gt;카테고리를&lt;/span&gt; &lt;span class="err"&gt;적으면&lt;/span&gt; &lt;span class="err"&gt;된다&lt;/span&gt;
+
+&lt;span class="err"&gt;그리고&lt;/span&gt; &lt;span class="err"&gt;여기에&lt;/span&gt; &lt;span class="err"&gt;내용을&lt;/span&gt; &lt;span class="err"&gt;적으면&lt;/span&gt; &lt;span class="err"&gt;된다&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;내용에서의 마크다운 문법은 Git-Flavored Markdown  의 형식을 준수하면 된다.&lt;/p&gt;
+&lt;p&gt;파일 제목을 영어로 작성하자. 한글로 작성시 오류가 날 확률이 있다.&lt;/p&gt;
+&lt;hr /&gt;
+&lt;h2&gt;Github Pages에 업로드하기&lt;/h2&gt;
+&lt;p&gt;단순하니 아래의 명령어를 참고하자.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;# 펠리칸으로 빌드를 하고&lt;/span&gt;
+&lt;span class="nv"&gt;$ &lt;/span&gt;pelican content
+
+&lt;span class="c"&gt;# output 폴더로 가서&lt;/span&gt;
+&lt;span class="nv"&gt;$ &lt;/span&gt;&lt;span class="nb"&gt;cd &lt;/span&gt;output
+
+&lt;span class="c"&gt;# 커밋을 하고 푸시한다&lt;/span&gt;
+&lt;span class="nv"&gt;$ &lt;/span&gt;git add .
+&lt;span class="nv"&gt;$ &lt;/span&gt;git commit -m &lt;span class="s2"&gt;&amp;quot;커밋 메시지&amp;quot;&lt;/span&gt;
+&lt;span class="nv"&gt;$ &lt;/span&gt;git push origin master
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;좀 더 편리한 방법으로 Travis-CI를 연결하여 자동으로 푸시되게 하는 방법이 있는데, 이 부분은 나중에 작성할 예정이다.&lt;/p&gt;
+&lt;p&gt;현재 upload.sh 파일을 작성하여 위의 과정을 쉘 스크립트로 자동화시켜놓았다.
+Travis와 연동하면 의미없는 짓이긴 하지만... 당장 바로 써먹을 땐 무식하게 돌아가도록 짜는 것도.... 생각보다 그리 나쁘진 않다. (...)&lt;/p&gt;</summary></entry></feed>
