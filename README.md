@@ -1,3 +1,4 @@
-# WIP
+:electric_plug: [Source](http://github.com/channprj/wiki.chann.kr-source)
 
-Github Pages 기능을 활용해서 위키를 만들 예정입니다.
+:memo: [Page](http://wiki.chann.kr)
+
