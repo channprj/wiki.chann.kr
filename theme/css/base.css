@@ -1,0 +1,59 @@
+
+/* XEICON */
+.gnb-xeicon {
+	font-size: 1.4em;
+	line-height: 18px;
+	padding: 0 4px;
+	float: left;
+}
+
+/* Bootstrap overrides */
+.navbar {
+	height: 40px;
+	min-height: 40px;
+	border-radius: 0;
+}
+
+.navbar-header {
+	height: 38px;
+}
+
+.navbar-brand {
+	height: 40px;
+	min-height: 40px;
+	font-size: 1.6em;
+	padding: 10px 10px;
+	line-height: 18px;
+}
+
+.navbar-inverse .navbar-brand {
+	color: #ffffff;
+}
+
+.navbar-nav>li>a {
+	padding: 10px 16px;
+	font-size: 1.2em;
+	height: 38px;
+	line-height: 18px;
+}
+
+.navbar-inverse .navbar-nav>li>a:focus,
+.navbar-inverse .navbar-nav>li>a:hover {
+	background-color: #505050;	
+}
+
+.navbar-inverse .navbar-nav>.active>a,
+.navbar-inverse .navbar-nav>.active>a:focus,
+.navbar-inverse .navbar-nav>.active>a:hover {
+	background-color: #505050;
+}
+/* Bootstrap mobile overrides */
+.navbar-toggle {
+	margin-top: 2px;
+}
+
+.navbar-inverse .navbar-collapse,
+.navbar-inverse .navbar-form {
+	background-color: #303030;
+	
+}

@@ -1,84 +1,154 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
-	<!--
-	## for client-side less
-	<link rel="stylesheet/less" type="text/css" href="http://wiki.chann.kr/theme/css/style.less">
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/less.js/1.7.3/less.min.js" type="text/javascript"></script>
-	-->
-	<link rel="stylesheet" type="text/css" href="http://wiki.chann.kr/theme/css/style.css">
-	<link rel="stylesheet" type="text/css" href="http://wiki.chann.kr/theme/css/pygments.css">
-	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=PT+Sans|PT+Serif|PT+Mono">
-
-	<meta charset="utf-8" />
+	<title>dev - CHANN Wiki</title>
+	<!-- Using the latest rendering mode for IE -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="author" content="CHANN">
-	<meta name="description" content="Posts and writings by CHANN">
-
-	<link href="http://wiki.chann.kr/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="CHANN Wiki Atom" />
+	
 
 
-	<title>
-		CHANN Wiki
-&ndash; Tag: dev	</title>
+
+    <meta name="author" content="CHANN" />
+    <meta name="keywords" content="dev" />
+
+	<!-- Components -->
+	<link rel="stylesheet" href="../theme/bower_components/bootstrap/dist/css/bootstrap.min.css" type="text/css"/>
+	<link rel="stylesheet" type="text/css" href="../theme/bower_components/xeicon/xeicon.min.css">
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../theme/css/base.css" type="text/css"/>
+
+	<link href="../feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="CHANN Wiki ATOM Feed"/>
+
+
 
 </head>
-
 <body>
-	<aside>
-		<div id="user_meta">
-			<a href="http://wiki.chann.kr">
-				<img src="http://wiki.chann.kr/theme/images/logo.png" alt="logo" style="width:100px;height:100px;">
-			</a>
-			<h2><a href="http://wiki.chann.kr">CHANN</a></h2>
-			<p></p>
-			<ul>
-				<li><a href="/categories">카테고리</a></li>
-				<li><a href="/tags">태그</a></li>
-				<li><a href="/archives">아카이브</a></li>
-				<li><a href="http://blog.chann.kr" target="_blank">Blog</a></li>
-				<li><a href="https://chann.kr" target="_blank">Resume</a></li>
-				<li><a href="https://github.com/channprj" target="_blank">Github</a></li>
-				<li><a href="https://twitter.com/chann_kr" target="_blank">Twitter</a></li>
-				<li><a href="https://fb.com/channprj" target="_blank">Facebook</a></li>
+<div class="navbar navbar-inverse" role="navigation">
+	<div class="container">
+		<div class="navbar-header">
+			<a href="../" class="navbar-brand">
+CHANN Wiki			</a>
+		</div>
+		<div class="collapse navbar-collapse navbar-ex1-collapse">
+			<ul class="nav navbar-nav">
+						 <li><a href="../about">
+							 소개
+						  </a></li>
+						 <li><a href="../isolated">
+							 고립된 문서
+						  </a></li>
+						 <li><a href="../languages">
+							 언어
+						  </a></li>
+						 <li><a href="../recent">
+							 최근문서
+						  </a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="https://github.com/channprj"><i class="gnb-xeicon xi-github"></i></a></li>
+				<li><a href="../archives"><i class="gnb-xeicon xi-archive"></i><!-- <span class="icon-label"></span> --></a></li>
+				<li><a href="../categories"><i class="gnb-xeicon xi-sitemap"></i></a></li>
+				<li><a href="../tags"><i class="gnb-xeicon xi-tags"></i></a></li>
+				<li><a href="../search"><i class="gnb-xeicon xi-magnifier"></i></a></li>
 			</ul>
 		</div>
-	</aside>
-
-	<main>
-		<header>
-			<p>
-			<a href="http://wiki.chann.kr">Index</a> &brvbar; <a href="http://wiki.chann.kr/archives.html">Archives</a>
-			&brvbar; <a href="http://wiki.chann.kr/feeds/all.atom.xml">Atom</a>
-&gt; Tag: dev
-			</p>
-		</header>
-
-<article>
-  <div class="article_title">
-    <h3><a href="http://wiki.chann.kr/dev/django-static-page-guide">django 정적 페이지 만드는 법</a></h3>
-  </div>
-  <div class="article_text">
-    <!--Summary: -->
+		<!-- /.navbar-collapse -->
+	</div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container">
+	<div class="row">
+		<div class="col-sm-9">
+    <ol class="breadcrumb">
+        <li><a href=".." title="CHANN Wiki"><i class="fa fa-home fa-lg"></i></a></li>
+        <li><a href="../" title="Tags">Tags</a></li>
+        <li class="active">dev</li>
+    </ol>
+            <article>
+                <h2><a href="../dev/django-static-page-guide">django 정적 페이지 만드는 법</a></h2>
+                <div class="summary"><!--Summary: -->
 
 <blockquote>
 <p>작성중입니다.</p>
 </blockquote>
 <p>django에서 정적 페이지를 만들 땐 아래의 문서를 참조하자.</p>
 <p><a href="https://docs.djangoproject.com/en/1.9/ref/contrib/flatpages/">django 1.9 버전 공식 문서</a></p>
-  </div>
-</article>
+                    <a class="btn btn-default btn-xs" href="../dev/django-static-page-guide">more ...</a>
+                </div>
+            </article>
+            <hr/>
 
-<footer>
-<div id="paginator">
-
-</div>
-</footer>
-
-		<div id="ending_message">
-			<p>&copy; CHANN. Built using <a href="http://getpelican.com" target="_blank">Pelican</a>. Theme by Giulio Fidente on <a href="https://github.com/gfidente/pelican-svbhack" target="_blank">github</a>. </p>
 		</div>
-	</main>
+		<div class="col-sm-3" id="sidebar">
+			<aside>
+
+<section class="well well-sm">
+    <ul class="list-group list-group-flush">
+            <li class="list-group-item"><h4><i class=""></i> <span class="icon-label">Social</span></h4>
+              <ul class="list-group" id="social">
+                <li class="list-group-item"><a href="https://chann.kr"><i class="fa fa-resume-square fa-lg"></i> Resume</a></li>
+                <li class="list-group-item"><a href="https://github.com/channprj"><i class="fa fa-github-square fa-lg"></i> Github</a></li>
+                <li class="list-group-item"><a href="https://twitter.com/chann_kr"><i class="fa fa-twitter-square fa-lg"></i> Twitter</a></li>
+                <li class="list-group-item"><a href="https://fb.com/channprj"><i class="fa fa-facebook-square fa-lg"></i> Facebook</a></li>
+              </ul>
+            </li>
+
+
+
+
+
+    <li class="list-group-item"><h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
+      <ul class="list-group" id="links">
+        <li class="list-group-item">
+            <a href="http://blog.chann.kr" target="_blank">
+                Blog
+            </a>
+        </li>
+      </ul>
+    </li>
+    </ul>
+</section>
+			</aside>
+		</div>
+	</div>
+</div>
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2015 CHANN
+            &middot; Powered by 
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>
+         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="xi-angle-up"></i><a href="#">Top</a></p></div>
+      </div>
+   </div>
+</footer>
+<!-- JS Components -->
+<script src="../theme/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="../theme/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+
+    <!-- Disqus -->
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'chann-wiki'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+    <!-- End Disqus Code -->
+
 </body>
 </html>
