@@ -25,6 +25,9 @@
 	padding: 10px 10px;
 	line-height: 18px;
 }
+.navbar-inverse {
+	background-color: #303030;
+}
 
 .navbar-inverse .navbar-brand {
 	color: #ffffff;
