@@ -163,30 +163,30 @@ client &amp;lt;-&amp;gt; the web server &amp;lt;-&amp;gt; the socket &amp;lt;-&a
 
 
 &lt;p&gt;그럼 장고 welcome 페이지가 뜰 것이다. 이제 nginx 와 연동을 하자.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="c"&gt;################# uWSGI configuration #################&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;################# uWSGI configuration #################&lt;/span&gt;
 
-    &lt;span class="nv"&gt;event&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; epoll
-    &lt;span class="nv"&gt;ssl&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; True
-    &lt;span class="nv"&gt;plugin_dir&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; .
-    &lt;span class="nv"&gt;timer&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; timerfd
-    &lt;span class="nv"&gt;capabilities&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; False
-    &lt;span class="nv"&gt;yaml&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; embedded
-    &lt;span class="nv"&gt;pcre&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; True
-    &lt;span class="nv"&gt;filemonitor&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; inotify
-    &lt;span class="nv"&gt;malloc&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; libc
-    &lt;span class="nv"&gt;zlib&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; True
-    &lt;span class="nv"&gt;execinfo&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; False
-    &lt;span class="nv"&gt;json&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; False
-    &lt;span class="nv"&gt;ifaddrs&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; True
-    &lt;span class="nv"&gt;xml&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; expat
-    &lt;span class="nv"&gt;routing&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; True
-    &lt;span class="nv"&gt;locking&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; pthread_mutex
-    &lt;span class="nv"&gt;kernel&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; Linux
-    &lt;span class="nv"&gt;debug&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; False
+&lt;span class="nv"&gt;event&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; epoll
+&lt;span class="nv"&gt;ssl&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; True
+&lt;span class="nv"&gt;plugin_dir&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; .
+&lt;span class="nv"&gt;timer&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; timerfd
+&lt;span class="nv"&gt;capabilities&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; False
+&lt;span class="nv"&gt;yaml&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; embedded
+&lt;span class="nv"&gt;pcre&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; True
+&lt;span class="nv"&gt;filemonitor&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; inotify
+&lt;span class="nv"&gt;malloc&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; libc
+&lt;span class="nv"&gt;zlib&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; True
+&lt;span class="nv"&gt;execinfo&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; False
+&lt;span class="nv"&gt;json&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; False
+&lt;span class="nv"&gt;ifaddrs&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; True
+&lt;span class="nv"&gt;xml&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; expat
+&lt;span class="nv"&gt;routing&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; True
+&lt;span class="nv"&gt;locking&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; pthread_mutex
+&lt;span class="nv"&gt;kernel&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; Linux
+&lt;span class="nv"&gt;debug&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; False
 
-    &lt;span class="c"&gt;############## end of uWSGI configuration #############&lt;/span&gt;
-    total build &lt;span class="nb"&gt;time&lt;/span&gt;: &lt;span class="m"&gt;24&lt;/span&gt; seconds
-    *** uWSGI is ready, launch it with /home/kusle/.pyenv/versions/kusle-3.4.2/bin/uwsgi ***
+&lt;span class="c"&gt;############## end of uWSGI configuration #############&lt;/span&gt;
+total build &lt;span class="nb"&gt;time&lt;/span&gt;: &lt;span class="m"&gt;24&lt;/span&gt; seconds
+*** uWSGI is ready, launch it with /home/kusle/.pyenv/versions/kusle-3.4.2/bin/uwsgi ***
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -231,17 +231,17 @@ client &amp;lt;-&amp;gt; the web server &amp;lt;-&amp;gt; the socket &amp;lt;-&a
 &lt;p&gt;마스터로 계속 돌아가는 uwsgi를 멈추는 방법은 &lt;code&gt;killall -s INT uwsgi&lt;/code&gt;명령어를 사용하면 된다.&lt;/p&gt;
 &lt;hr /&gt;
 &lt;h2&gt;자동으로 uWSGI 실행되도록 설정&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;description &amp;quot;uWSGI server instance configured to serve my project&amp;quot;
+&lt;div class="highlight"&gt;&lt;pre&gt;description &lt;span class="s2"&gt;&amp;quot;uWSGI server instance configured to serve my project&amp;quot;&lt;/span&gt;
 
-start on runlevel [2345]
-stop on runlevel [!2345]
+start on runlevel &lt;span class="o"&gt;[&lt;/span&gt;2345&lt;span class="o"&gt;]&lt;/span&gt;
+stop on runlevel &lt;span class="o"&gt;[&lt;/span&gt;!2345&lt;span class="o"&gt;]&lt;/span&gt;
 
 setuid kusle
 setgid www-data
 
-env PATH=/home/kusle/django/myprojectenv/bin
+env &lt;span class="nv"&gt;PATH&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;/home/kusle/django/myprojectenv/bin
 chdir /home/kusle/django
-exec uwsgi --http :8000 kusle.ini
+&lt;span class="nb"&gt;exec &lt;/span&gt;uwsgi --http :8000 kusle.ini
 &lt;/pre&gt;&lt;/div&gt;
 
 

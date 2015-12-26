@@ -14,12 +14,15 @@
         <meta name="author" content="CHANN" />
         <meta name="description" content="Pelican에서 글을 쓰는 건 간단하다. 작성법 ├── LICENSE ├── Makefile ├── __pycache__ │ └── pelicanconf.cpython-34.pyc │ ├── content # 이 폴더 안에 다음과 같이 xxx.md(마크다운) 파일을 넣자 │ ├── about.md │ ├── hello.md │ └── how-to-write.md │ ├── develop_server.sh ├── fabfile.py ├── pelicanconf.py ├── pelicanconf.pyc ├── publishconf.py ├── publishconf.pyc │ └── output # 이 폴더가 바로 github page에 동기화되어야 할 폴더 ..." />
 
-	<!-- Components -->
-	<link rel="stylesheet" href="../theme/bower_components/bootstrap/dist/css/bootstrap.min.css" type="text/css"/>
+	<!-- CSS Components -->
+	<link rel="stylesheet" type="text/css" href="../theme/bower_components/bootstrap/dist/css/bootstrap.min.css"/>
 	<link rel="stylesheet" type="text/css" href="../theme/bower_components/xeicon/xeicon.min.css">
-
+	<link rel="stylesheet" type="text/css" href="../theme/css/pygment.css"/>
+	<link rel="stylesheet" type="text/css" href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css">
+	<link rel="stylesheet" type="text/css" href="https://blog.chann.kr/assets/css/bigfoot-number.css">
+	
 	<!-- CSS -->
-	<link rel="stylesheet" href="../theme/css/base.css" type="text/css"/>
+	<link rel="stylesheet" type="text/css" href="../theme/css/base.css"/>
 
 	<link href="../feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="CHANN Wiki ATOM Feed"/>
 
@@ -233,9 +236,11 @@ Travis와 연동하면 의미없는 짓이긴 하지만... 당장 바로 써먹�
    </div>
 </footer>
 <!-- JS Components -->
-<script src="../theme/bower_components/jquery/dist/jquery.min.js"></script>
-<script src="../theme/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-
+<script type="text/javascript" src="../theme/bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="../theme/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://blog.chann.kr/assets/js/bigfoot.min.js"></script>
+<script type="text/javascript">$.bigfoot();</script>
+<!-- <script src="../theme/js/prism.js"></script> -->
 
     <!-- Disqus -->
     <script type="text/javascript">

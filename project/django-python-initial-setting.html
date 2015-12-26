@@ -15,12 +15,15 @@
         <meta name="keywords" content="ku,django,python,init" />
         <meta name="description" content="졸업프로젝트 임시 기록용." />
 
-	<!-- Components -->
-	<link rel="stylesheet" href="../theme/bower_components/bootstrap/dist/css/bootstrap.min.css" type="text/css"/>
+	<!-- CSS Components -->
+	<link rel="stylesheet" type="text/css" href="../theme/bower_components/bootstrap/dist/css/bootstrap.min.css"/>
 	<link rel="stylesheet" type="text/css" href="../theme/bower_components/xeicon/xeicon.min.css">
-
+	<link rel="stylesheet" type="text/css" href="../theme/css/pygment.css"/>
+	<link rel="stylesheet" type="text/css" href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css">
+	<link rel="stylesheet" type="text/css" href="https://blog.chann.kr/assets/css/bigfoot-number.css">
+	
 	<!-- CSS -->
-	<link rel="stylesheet" href="../theme/css/base.css" type="text/css"/>
+	<link rel="stylesheet" type="text/css" href="../theme/css/base.css"/>
 
 	<link href="../feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="CHANN Wiki ATOM Feed"/>
 
@@ -179,30 +182,30 @@ client &lt;-&gt; the web server &lt;-&gt; the socket &lt;-&gt; uwsgi &lt;-&gt; D
 
 
 <p>그럼 장고 welcome 페이지가 뜰 것이다. 이제 nginx 와 연동을 하자.</p>
-<div class="highlight"><pre>    <span class="c">################# uWSGI configuration #################</span>
+<div class="highlight"><pre><span class="c">################# uWSGI configuration #################</span>
 
-    <span class="nv">event</span> <span class="o">=</span> epoll
-    <span class="nv">ssl</span> <span class="o">=</span> True
-    <span class="nv">plugin_dir</span> <span class="o">=</span> .
-    <span class="nv">timer</span> <span class="o">=</span> timerfd
-    <span class="nv">capabilities</span> <span class="o">=</span> False
-    <span class="nv">yaml</span> <span class="o">=</span> embedded
-    <span class="nv">pcre</span> <span class="o">=</span> True
-    <span class="nv">filemonitor</span> <span class="o">=</span> inotify
-    <span class="nv">malloc</span> <span class="o">=</span> libc
-    <span class="nv">zlib</span> <span class="o">=</span> True
-    <span class="nv">execinfo</span> <span class="o">=</span> False
-    <span class="nv">json</span> <span class="o">=</span> False
-    <span class="nv">ifaddrs</span> <span class="o">=</span> True
-    <span class="nv">xml</span> <span class="o">=</span> expat
-    <span class="nv">routing</span> <span class="o">=</span> True
-    <span class="nv">locking</span> <span class="o">=</span> pthread_mutex
-    <span class="nv">kernel</span> <span class="o">=</span> Linux
-    <span class="nv">debug</span> <span class="o">=</span> False
+<span class="nv">event</span> <span class="o">=</span> epoll
+<span class="nv">ssl</span> <span class="o">=</span> True
+<span class="nv">plugin_dir</span> <span class="o">=</span> .
+<span class="nv">timer</span> <span class="o">=</span> timerfd
+<span class="nv">capabilities</span> <span class="o">=</span> False
+<span class="nv">yaml</span> <span class="o">=</span> embedded
+<span class="nv">pcre</span> <span class="o">=</span> True
+<span class="nv">filemonitor</span> <span class="o">=</span> inotify
+<span class="nv">malloc</span> <span class="o">=</span> libc
+<span class="nv">zlib</span> <span class="o">=</span> True
+<span class="nv">execinfo</span> <span class="o">=</span> False
+<span class="nv">json</span> <span class="o">=</span> False
+<span class="nv">ifaddrs</span> <span class="o">=</span> True
+<span class="nv">xml</span> <span class="o">=</span> expat
+<span class="nv">routing</span> <span class="o">=</span> True
+<span class="nv">locking</span> <span class="o">=</span> pthread_mutex
+<span class="nv">kernel</span> <span class="o">=</span> Linux
+<span class="nv">debug</span> <span class="o">=</span> False
 
-    <span class="c">############## end of uWSGI configuration #############</span>
-    total build <span class="nb">time</span>: <span class="m">24</span> seconds
-    *** uWSGI is ready, launch it with /home/kusle/.pyenv/versions/kusle-3.4.2/bin/uwsgi ***
+<span class="c">############## end of uWSGI configuration #############</span>
+total build <span class="nb">time</span>: <span class="m">24</span> seconds
+*** uWSGI is ready, launch it with /home/kusle/.pyenv/versions/kusle-3.4.2/bin/uwsgi ***
 </pre></div>
 
 
@@ -247,17 +250,17 @@ client &lt;-&gt; the web server &lt;-&gt; the socket &lt;-&gt; uwsgi &lt;-&gt; D
 <p>마스터로 계속 돌아가는 uwsgi를 멈추는 방법은 <code>killall -s INT uwsgi</code>명령어를 사용하면 된다.</p>
 <hr />
 <h2>자동으로 uWSGI 실행되도록 설정</h2>
-<div class="highlight"><pre>description &quot;uWSGI server instance configured to serve my project&quot;
+<div class="highlight"><pre>description <span class="s2">&quot;uWSGI server instance configured to serve my project&quot;</span>
 
-start on runlevel [2345]
-stop on runlevel [!2345]
+start on runlevel <span class="o">[</span>2345<span class="o">]</span>
+stop on runlevel <span class="o">[</span>!2345<span class="o">]</span>
 
 setuid kusle
 setgid www-data
 
-env PATH=/home/kusle/django/myprojectenv/bin
+env <span class="nv">PATH</span><span class="o">=</span>/home/kusle/django/myprojectenv/bin
 chdir /home/kusle/django
-exec uwsgi --http :8000 kusle.ini
+<span class="nb">exec </span>uwsgi --http :8000 kusle.ini
 </pre></div>
 
 
@@ -444,9 +447,11 @@ exec uwsgi --http :8000 kusle.ini
    </div>
 </footer>
 <!-- JS Components -->
-<script src="../theme/bower_components/jquery/dist/jquery.min.js"></script>
-<script src="../theme/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-
+<script type="text/javascript" src="../theme/bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="../theme/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://blog.chann.kr/assets/js/bigfoot.min.js"></script>
+<script type="text/javascript">$.bigfoot();</script>
+<!-- <script src="../theme/js/prism.js"></script> -->
 
     <!-- Disqus -->
     <script type="text/javascript">

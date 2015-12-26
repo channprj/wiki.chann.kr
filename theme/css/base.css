@@ -1,3 +1,11 @@
+html, body {
+	font-family: 'Spoqa Han Sans', 'Noto Sans', 나눔바른고딕, NanumBarunGothic, 나눔고딕, NanumGothic, '맑은 고딕', 'Malgun Gothic', 'Open Sans', 'Helvetica Neue', Helvetica, Dotum, 돋움, sans-serif;
+}
+
+p {
+	font-size: 18px;
+	line-height: 1.8;
+}
 
 /* XEICON */
 .gnb-xeicon {
@@ -57,6 +65,5 @@
 
 .navbar-inverse .navbar-collapse,
 .navbar-inverse .navbar-form {
-	background-color: #303030;
-	
+	background-color: #303030;	
 }
