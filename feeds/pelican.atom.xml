@@ -2,8 +2,8 @@
 <feed xmlns="http://www.w3.org/2005/Atom"><title>CHANN Wiki</title><link href="http://wiki.chann.kr/" rel="alternate"></link><link href="http://wiki.chann.kr/feeds/pelican.atom.xml" rel="self"></link><id>http://wiki.chann.kr/</id><updated>2015-11-21T22:20:00+09:00</updated><entry><title>Pelican 설치 가이드</title><link href="http://wiki.chann.kr/pelican/how-to-install-pelican" rel="alternate"></link><updated>2015-11-21T22:20:00+09:00</updated><author><name>CHANN</name></author><id>tag:wiki.chann.kr,2015-11-21:pelican/how-to-install-pelican</id><summary type="html">&lt;blockquote&gt;
 &lt;p&gt;작성중&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;CHANN@CHANN-Macbook:~/git/channprj.github.io&lt;span class="o"&gt;(&lt;/span&gt;master○&lt;span class="o"&gt;)&lt;/span&gt; » git config user.name &lt;span class="s2"&gt;&amp;quot;channprj&amp;quot;&lt;/span&gt;
-CHANN@CHANN-Macbook:~/git/channprj.github.io&lt;span class="o"&gt;(&lt;/span&gt;master○&lt;span class="o"&gt;)&lt;/span&gt; » git config user.email &lt;span class="s2"&gt;&amp;quot;chann@chann.kr&amp;quot;&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;CHANN@CHANN-Macbook:~/git/channprj.github.io&lt;span class="o"&gt;(&lt;/span&gt;master○&lt;span class="o"&gt;)&lt;/span&gt; » git config user.name &lt;span class="s2"&gt;"channprj"&lt;/span&gt;
+CHANN@CHANN-Macbook:~/git/channprj.github.io&lt;span class="o"&gt;(&lt;/span&gt;master○&lt;span class="o"&gt;)&lt;/span&gt; » git config user.email &lt;span class="s2"&gt;"chann@chann.kr"&lt;/span&gt;
 CHANN@CHANN-Macbook:~/git/channprj.github.io&lt;span class="o"&gt;(&lt;/span&gt;master○&lt;span class="o"&gt;)&lt;/span&gt; » pelican-quickstart
 Welcome to pelican-quickstart v3.6.3.
 
@@ -53,8 +53,6 @@ Done. Your new project is available at /Users/CHANN/git/channprj.github.io
 │
 └── output  &lt;span class="c"&gt;# 이 폴더가 바로 github page에 동기화되어야 할 폴더&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-
-
 &lt;p&gt;Pelican을 사용할 때 명시해야 할 형식은 아래와 같다.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;Title&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;  &lt;span class="err"&gt;제목을&lt;/span&gt; &lt;span class="err"&gt;적으면&lt;/span&gt; &lt;span class="err"&gt;된다&lt;/span&gt;
 &lt;span class="n"&gt;Date&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;2015&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;11&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;18&lt;/span&gt; &lt;span class="mi"&gt;17&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;27&lt;/span&gt;
@@ -62,11 +60,9 @@ Done. Your new project is available at /Users/CHANN/git/channprj.github.io
 
 &lt;span class="err"&gt;그리고&lt;/span&gt; &lt;span class="err"&gt;여기에&lt;/span&gt; &lt;span class="err"&gt;내용을&lt;/span&gt; &lt;span class="err"&gt;적으면&lt;/span&gt; &lt;span class="err"&gt;된다&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-
-
 &lt;p&gt;내용에서의 마크다운 문법은 Git-Flavored Markdown  의 형식을 준수하면 된다.&lt;/p&gt;
 &lt;p&gt;파일 제목을 영어로 작성하자. 한글로 작성시 오류가 날 확률이 있다.&lt;/p&gt;
-&lt;hr /&gt;
+&lt;hr/&gt;
 &lt;h2&gt;Github Pages에 업로드하기&lt;/h2&gt;
 &lt;p&gt;단순하니 아래의 명령어를 참고하자.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;# 펠리칸으로 빌드를 하고&lt;/span&gt;
@@ -77,9 +73,7 @@ Done. Your new project is available at /Users/CHANN/git/channprj.github.io
 
 &lt;span class="c"&gt;# 커밋을 하고 푸시한다&lt;/span&gt;
 &lt;span class="nv"&gt;$ &lt;/span&gt;git add .
-&lt;span class="nv"&gt;$ &lt;/span&gt;git commit -m &lt;span class="s2"&gt;&amp;quot;커밋 메시지&amp;quot;&lt;/span&gt;
+&lt;span class="nv"&gt;$ &lt;/span&gt;git commit -m &lt;span class="s2"&gt;"커밋 메시지"&lt;/span&gt;
 &lt;span class="nv"&gt;$ &lt;/span&gt;git push origin master
 &lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;좀 더 편리한 방법으로 &lt;a href="travis-ci&amp;gt;"&gt;Travis-CI&lt;/a&gt;를 연결하여 자동으로 푸시되게 하는 방법이 있다.&lt;/p&gt;</summary></entry></feed>
+&lt;p&gt;좀 더 편리한 방법으로 &lt;a href="http://wiki.chann.kr/travis-ci"&gt;Travis-CI&lt;/a&gt;를 연결하여 자동으로 푸시되게 하는 방법이 있다.&lt;/p&gt;</summary></entry></feed>

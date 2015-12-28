@@ -114,20 +114,16 @@ CHANN Wiki			</a>
 <span class="nv">$ </span>sudo easy_install pip
 <span class="nv">$ </span>brew install pyenv
 </pre></div>
-
-
 <p><a href="https://github.com/yyuu/pyenv">Github pyenv 저장소</a> 의 설명을 잘 보고 따라해야 한다. 나는 bash가 아닌 zshell을 사용하므로 <code>.zshrc</code> 파일을 수정해주었다. 영어로 되어있지만 어려운 내용은 없으니 그냥 시키는대로 하면 된다.  </p>
 <p>제대로 설정이 되었는지 확인해보자.</p>
 <div class="highlight"><pre>CHANN@CHANN-Macbook:~ » python
 Python 3.4.0 <span class="o">(</span>default, Oct <span class="m">26</span> 2015, 06:24:28<span class="o">)</span>
 <span class="o">[</span>GCC 4.2.1 Compatible Apple LLVM 7.0.0 <span class="o">(</span>clang-700.1.76<span class="o">)]</span> on darwin
-Type <span class="s2">&quot;help&quot;</span>, <span class="s2">&quot;copyright&quot;</span>, <span class="s2">&quot;credits&quot;</span> or <span class="s2">&quot;license&quot;</span> <span class="k">for</span> more information.
+Type <span class="s2">"help"</span>, <span class="s2">"copyright"</span>, <span class="s2">"credits"</span> or <span class="s2">"license"</span> <span class="k">for</span> more information.
 &gt;&gt;&gt; <span class="nb">exit</span><span class="o">()</span>
 CHANN@CHANN-Macbook:~ »
 </pre></div>
-
-
-<hr />
+<hr/>
 <h2>python, parser, virtualenv 등 세팅</h2>
 <div class="highlight"><pre><span class="nv">$ </span>pip install beautifulsoup4
 <span class="nv">$ </span>pip install lxml
@@ -135,17 +131,13 @@ CHANN@CHANN-Macbook:~ »
 <span class="nv">$ </span>brew install pyenv-virtualenv
 <span class="nv">$ </span>brew install autoenv
 </pre></div>
-
-
-<hr />
+<hr/>
 <h2>Django 설치</h2>
 <div class="highlight"><pre><span class="nv">$ </span>pyenv virtualenv 3.4.2 kusle-3.4.2
 <span class="nv">$ </span>pyenv shell kusle-3.4.2
 <span class="nv">$ </span>pip install <span class="nv">django</span><span class="o">==</span>1.8.6
 <span class="nv">$ </span>django-admin startproject kusle .
 </pre></div>
-
-
 <p>그럼 아래와 같은 구조의 폴더가 생성된다.</p>
 <div class="highlight"><pre>kusle
 ├── __init__.py
@@ -153,27 +145,21 @@ CHANN@CHANN-Macbook:~ »
 ├── urls.py
 └── wsgi.py
 </pre></div>
-
-
 <p>wsgi는 웹 서버 게이트웨이 인터페이스(WSGI, Web Server Gateway Interface)는 웹서버와 웹 애플리케이션의 인터페이스를 위한 파이썬 프레임워크다. Low-Level로 작성되어 웹서버와 웹 어플리케션, 프레임워크간의 벽을 허물었다.</p>
 <p>웹 어플리케이션 개발이 목적이므로, 기본적으로는 HTTP의 요청을 받아 응답을 돌려주어야 한다. 이러한 처리는 1차적으로 nginx를 통해 이뤄지는데, uwsgi라는 데몬을 사용하여 서버사이드를 처리할 예정이다.</p>
-<hr />
+<hr/>
 <h3>uwsgi 설치</h3>
-<p>uwsgi의 역할은 아래와 같다.<br />
+<p>uwsgi의 역할은 아래와 같다.<br/>
 client &lt;-&gt; the web server &lt;-&gt; the socket &lt;-&gt; uwsgi &lt;-&gt; Django</p>
 <p><code>pip</code> 를 통해 아래와 같이 <code>uwsgi</code> 를 설치하자.</p>
 <div class="highlight"><pre><span class="nv">$ </span>pip install uwsgi
 <span class="nv">$ </span>mkdir /usr/local/etc/uwsgi/
 </pre></div>
-
-
 <p>근데 <code>uwsgi</code> 명령어가 자꾸 에러를 뿜는다. 중국 형님들 블로그에서 힌트를 얻어 아래와 같은 방법으로 해결을 했다. linuxbrew를 사용해서 겪는 삽질일지도 모르겠다.<br/>
 <code>sudo ln -s /home/사용자/.linuxbrew/lib/libpcre.so.1 /lib</code></p>
 <p>이후에 다음과 같이 테스트해보자</p>
 <div class="highlight"><pre><span class="nv">$ </span>uwsgi --http :8000 --module kusle.wsgi
 </pre></div>
-
-
 <p>그럼 장고 welcome 페이지가 뜰 것이다. 이제 nginx 와 연동을 하자.</p>
 <div class="highlight"><pre><span class="c">################# uWSGI configuration #################</span>
 
@@ -200,8 +186,6 @@ client &lt;-&gt; the web server &lt;-&gt; the socket &lt;-&gt; uwsgi &lt;-&gt; D
 total build <span class="nb">time</span>: <span class="m">24</span> seconds
 *** uWSGI is ready, launch it with /home/kusle/.pyenv/versions/kusle-3.4.2/bin/uwsgi ***
 </pre></div>
-
-
 <div class="highlight"><pre><span class="c1"># uwsgi.ini</span>
 <span class="k">[uwsgi]</span>
 <span class="c1"># the base directory (full path)</span>
@@ -218,7 +202,7 @@ total build <span class="nb">time</span>: <span class="m">24</span> seconds
 <span class="c1"># protocol = uwsgi</span>
 <span class="c1"># daemonize = /home/kusle/django/log/kusle.log</span>
 
-<span class="c1"># Django&#39;s wsgi file</span>
+<span class="c1"># Django's wsgi file</span>
 <span class="na">module</span>          <span class="o">=</span> <span class="s">kusle.wsgi</span>
 
 <span class="c1"># the socket (use the full path to be safe</span>
@@ -238,12 +222,10 @@ total build <span class="nb">time</span>: <span class="m">24</span> seconds
 <span class="c1"># clear environment on exit</span>
 <span class="c1"># vacuum          = true</span>
 </pre></div>
-
-
 <p>마스터로 계속 돌아가는 uwsgi를 멈추는 방법은 <code>killall -s INT uwsgi</code>명령어를 사용하면 된다.</p>
-<hr />
+<hr/>
 <h2>자동으로 uWSGI 실행되도록 설정</h2>
-<div class="highlight"><pre>description <span class="s2">&quot;uWSGI server instance configured to serve my project&quot;</span>
+<div class="highlight"><pre>description <span class="s2">"uWSGI server instance configured to serve my project"</span>
 
 start on runlevel <span class="o">[</span>2345<span class="o">]</span>
 stop on runlevel <span class="o">[</span>!2345<span class="o">]</span>
@@ -255,16 +237,14 @@ env <span class="nv">PATH</span><span class="o">=</span>/home/kusle/django/mypro
 chdir /home/kusle/django
 <span class="nb">exec </span>uwsgi --http :8000 kusle.ini
 </pre></div>
-
-
-<hr />
+<hr/>
 <h2>MariaDB 설정</h2>
 <p>Django는 기본설정으로 Sqlite3를 사용한다. 하지만 이번 프로젝트에서는 새롭게 DB를 구축하는 것 이외에 기존의 DB를 활용하는 방안도 고려중이므로, 되도록이면 같은 DB를 사용하는 것이 나을 것 같다는 판단을 하였다.</p>
 <p>먼저, DB를 새롭게 생성하자. 먼저, <code>$ mysql -u root -p</code>를 통해 mariadb 콘솔로 접속한다.</p>
 <div class="highlight"><pre><span class="n">mysql</span><span class="o">&gt;</span> <span class="k">create</span> <span class="k">user</span> <span class="n">django</span><span class="p">;</span>
 <span class="n">Query</span> <span class="n">OK</span><span class="p">,</span> <span class="mi">0</span> <span class="k">rows</span> <span class="n">affected</span> <span class="p">(</span><span class="mi">0</span><span class="p">.</span><span class="mi">00</span> <span class="n">sec</span><span class="p">)</span>
 
-<span class="n">mysql</span><span class="o">&gt;</span> <span class="k">create</span> <span class="k">user</span> <span class="n">django</span><span class="o">@</span><span class="n">localhost</span> <span class="n">identified</span> <span class="k">by</span> <span class="s1">&#39;{비밀번호}&#39;</span><span class="p">;</span>
+<span class="n">mysql</span><span class="o">&gt;</span> <span class="k">create</span> <span class="k">user</span> <span class="n">django</span><span class="o">@</span><span class="n">localhost</span> <span class="n">identified</span> <span class="k">by</span> <span class="s1">'{비밀번호}'</span><span class="p">;</span>
 <span class="n">Query</span> <span class="n">OK</span><span class="p">,</span> <span class="mi">0</span> <span class="k">rows</span> <span class="n">affected</span> <span class="p">(</span><span class="mi">0</span><span class="p">.</span><span class="mi">01</span> <span class="n">sec</span><span class="p">)</span>
 
 <span class="n">mysql</span><span class="o">&gt;</span> <span class="k">grant</span> <span class="k">all</span> <span class="k">privileges</span> <span class="k">on</span> <span class="n">django</span><span class="p">.</span><span class="o">*</span> <span class="k">to</span> <span class="n">django</span><span class="o">@</span><span class="n">localhost</span><span class="p">;</span>
@@ -273,36 +253,28 @@ chdir /home/kusle/django
 <span class="n">mysql</span><span class="o">&gt;</span> <span class="n">flush</span> <span class="k">privileges</span><span class="p">;</span>
 <span class="n">Query</span> <span class="n">OK</span><span class="p">,</span> <span class="mi">0</span> <span class="k">rows</span> <span class="n">affected</span> <span class="p">(</span><span class="mi">0</span><span class="p">.</span><span class="mi">00</span> <span class="n">sec</span><span class="p">)</span>
 </pre></div>
-
-
 <p>settings.py에 그대로 드러나는 DB명, 아이디, 암호를 감추어야 하는데, 이것은 쉘 변수를 활용하면 된다. settings.py는 <code>import os</code>를 하므로 쉘 변수를 그대로 불러올 수 있다.</p>
 <p>.bashrc 또는 .zshrc 등의 쉘 환경설정 파일에 다음과 같이 추가한다</p>
-<div class="highlight"><pre><span class="nb">export </span><span class="nv">DB_NAME</span><span class="o">=</span><span class="s2">&quot;DB이름&quot;</span>
-<span class="nb">export </span><span class="nv">DB_ID</span><span class="o">=</span><span class="s2">&quot;DB 계정 아이디&quot;</span>
-<span class="nb">export </span><span class="nv">DB_PW</span><span class="o">=</span><span class="s2">&quot;DB 계정 암호&quot;</span>
+<div class="highlight"><pre><span class="nb">export </span><span class="nv">DB_NAME</span><span class="o">=</span><span class="s2">"DB이름"</span>
+<span class="nb">export </span><span class="nv">DB_ID</span><span class="o">=</span><span class="s2">"DB 계정 아이디"</span>
+<span class="nb">export </span><span class="nv">DB_PW</span><span class="o">=</span><span class="s2">"DB 계정 암호"</span>
 </pre></div>
-
-
 <p>그리고 settings.py의 DB 관련 코드를 아래와 같이 수정한다.</p>
 <div class="highlight"><pre><span class="n">DATABASES</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s">&#39;default&#39;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="s">&#39;ENGINE&#39;</span><span class="p">:</span> <span class="s">&#39;django.db.backends.mysql&#39;</span><span class="p">,</span>
-        <span class="s">&#39;NAME&#39;</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s">&quot;DB_NAME&quot;</span><span class="p">],</span>
-        <span class="s">&#39;USER&#39;</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s">&quot;DB_ID&quot;</span><span class="p">],</span>
-        <span class="s">&#39;PASSWORD&#39;</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s">&quot;DB_PW&quot;</span><span class="p">],</span>
-        <span class="s">&#39;HOST&#39;</span><span class="p">:</span> <span class="s">&#39;localhost&#39;</span><span class="p">,</span>
-        <span class="s">&#39;PORT&#39;</span><span class="p">:</span> <span class="s">&#39;&#39;</span><span class="p">,</span>
+    <span class="s">'default'</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s">'ENGINE'</span><span class="p">:</span> <span class="s">'django.db.backends.mysql'</span><span class="p">,</span>
+        <span class="s">'NAME'</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s">"DB_NAME"</span><span class="p">],</span>
+        <span class="s">'USER'</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s">"DB_ID"</span><span class="p">],</span>
+        <span class="s">'PASSWORD'</span><span class="p">:</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s">"DB_PW"</span><span class="p">],</span>
+        <span class="s">'HOST'</span><span class="p">:</span> <span class="s">'localhost'</span><span class="p">,</span>
+        <span class="s">'PORT'</span><span class="p">:</span> <span class="s">''</span><span class="p">,</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
-
-
 <p>설치를 완료했으면 DB 연동이 제대로 되었는지 테스트를 해보자.</p>
 <div class="highlight"><pre><span class="nv">$ </span>./manage.py collectstatic
 </pre></div>
-
-
-<hr />
+<hr/>
 <h2>최종 트리</h2>
 <div class="highlight"><pre>django
 ├── 3.4.2
@@ -338,9 +310,7 @@ chdir /home/kusle/django
     ├── lib
     └── <span class="nb">local</span>
 </pre></div>
-
-
-<hr />
+<hr/>
 <h2>참고</h2>
 <ol>
 <li><a href="https://www.digitalocean.com/community/tutorials/how-to-deploy-python-wsgi-applications-using-uwsgi-web-server-with-nginx">Digital Ocean의 uWSGI, Nginx 관련글</a></li>
@@ -359,6 +329,13 @@ chdir /home/kusle/django
 </ol>
             </div>
             <!-- /.entry-content -->
+<section class="well" id="related-posts">
+    <h4>Related Posts:</h4>
+    <ul>
+        <li><a href="../dev/django-static-page-guide">django 정적 페이지 만드는 법</a></li>
+        <li><a href="../project/ku-lecture-db-parsing">강의 편람 DB 파싱</a></li>
+    </ul>
+</section>
     <hr/>
     <section class="comments" id="comments">
         <h2>Comments</h2>
