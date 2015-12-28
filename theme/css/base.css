@@ -1,5 +1,36 @@
+/* Webfont */
+@font-face {
+    font-family: 'Spoqa Han Sans';
+    font-weight: 700;
+    /*src: local('SpoqaHanSans-Bold'), local('SpoqaHanSans-Bold'),*/
+    src: url(../font/SpoqaHanSans-Bold.eot) format('eot');
+    src: url(../font/SpoqaHanSans-Bold.svg) format('svg');
+    /*src: url(../font/SpoqaHanSans-Bold.ttf) format('truetype');*/
+    src: local(※), url(../font/SpoqaHanSans-Bold.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'Spoqa Han Sans';
+    font-weight: 400;
+    /*src: local('SpoqaHanSans-Regular'), local('SpoqaHanSans-Regular'),*/
+    src: url(../font/SpoqaHanSans-Regular.eot) format('eot');
+    src: url(../font/SpoqaHanSans-Regular.svg) format('svg');
+    /*src: url(../font/SpoqaHanSans-Regular.ttf) format('truetype');*/
+    src: local(※), url(../font/SpoqaHanSans-Regular.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'Spoqa Han Sans';
+    font-weight: 200;
+    /*src: local('SpoqaHanSans-Thin'), local('SpoqaHanSans-Thin'),*/
+    src: url(../font/SpoqaHanSans-Thin.eot) format('eot');
+    src: url(../font/SpoqaHanSans-Thin.svg) format('svg');
+    /*src: url(../font/SpoqaHanSans-Thin.ttf) format('truetype');*/
+    src: local(※), url(../font/SpoqaHanSans-Thin.woff) format('woff');
+}
+
 html, body {
-	font-family: 'Spoqa Han Sans', 'Noto Sans', 나눔바른고딕, NanumBarunGothic, 나눔고딕, NanumGothic, '맑은 고딕', 'Malgun Gothic', 'Open Sans', 'Helvetica Neue', Helvetica, Dotum, 돋움, sans-serif;
+	font-family: 'Spoqa Han Sans', 'Noto Sans', 나눔바른고딕, NanumBarunGothic, 나눔고딕, NanumGothic, '맑은 고딕', 'Malgun Gothic', shs, 'Open Sans', 'Helvetica Neue', Helvetica, Dotum, 돋움, sans-serif;
 }
 
 p {
