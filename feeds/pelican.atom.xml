@@ -82,6 +82,4 @@ Done. Your new project is available at /Users/CHANN/git/channprj.github.io
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;좀 더 편리한 방법으로 Travis-CI를 연결하여 자동으로 푸시되게 하는 방법이 있는데, 이 부분은 나중에 작성할 예정이다.&lt;/p&gt;
-&lt;p&gt;현재 upload.sh 파일을 작성하여 위의 과정을 쉘 스크립트로 자동화시켜놓았다.
-Travis와 연동하면 의미없는 짓이긴 하지만... 당장 바로 써먹을 땐 무식하게 돌아가도록 짜는 것도.... 생각보다 그리 나쁘진 않다. (...)&lt;/p&gt;</summary></entry></feed>
+&lt;p&gt;좀 더 편리한 방법으로 &lt;a href="travis-ci&amp;gt;"&gt;Travis-CI&lt;/a&gt;를 연결하여 자동으로 푸시되게 하는 방법이 있다.&lt;/p&gt;</summary></entry></feed>
