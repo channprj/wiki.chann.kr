@@ -68,6 +68,20 @@ CHANN Wiki			</a>
 	<div class="wrap row">
 		<div class="col-sm-9">
             <article>
+                <h2><a href="../dev/ssl-only-nginx-cloudflare">Nginx와 Cloudflare를 이용하여 SSL-Only 설정하기</a></h2>
+                <div class="summary"><!--Summary: -->
+<p>아주 간단하다. <code>sites-enabled</code>에 링크해 둔 Nginx 환경설정파일에 아래의 3줄을 추가하면 된다.</p>
+<div class="highlight"><pre><span class="k">if</span> <span class="s">(</span><span class="nv">$http_cf_visitor</span> <span class="p">~</span> <span class="sr">'</span><span class="p">{</span><span class="kn">"scheme":"http"}')</span> <span class="p">{</span>
+  <span class="kn">return</span> <span class="mi">301</span> <span class="s">https://</span><span class="nv">$server_name$request_uri</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+<p>Let's Encrypt를 사용하는 정도의 방법이 있긴 한데, Cloudflare를 사용한다면 위의 방법이 보다 편리하고 나은 선택이 될 수 있다. 인증기간도 더 길고, Nginx 환경설정 파일의 코드 3줄이면 끝나니까.</p>
+<p>아래의 ...</p></!--summary:>
+                    <a class="btn btn-default btn-xs" href="../dev/ssl-only-nginx-cloudflare">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
                 <h2><a href="../dev/django-static-page-guide">django 정적 페이지 만드는 법</a></h2>
                 <div class="summary"><!--Summary: -->
 <blockquote>

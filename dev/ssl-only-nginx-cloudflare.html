@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-	<title>server - CHANN Wiki</title>
+	<title>Nginx와 Cloudflare를 이용하여 SSL-Only 설정하기 - CHANN Wiki</title>
 	<!-- Using the latest rendering mode for IE -->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta charset="utf-8">
@@ -9,9 +9,11 @@
 	
 
 
+<link rel="canonical" href="../dev/ssl-only-nginx-cloudflare">
 
-    <meta name="author" content="CHANN" />
-    <meta name="keywords" content="server" />
+        <meta name="author" content="CHANN" />
+        <meta name="keywords" content="dev,server,nginx,ssl,secure" />
+        <meta name="description" content="아주 간단하다. sites-enabled에 링크해 둔 Nginx 환경설정파일에 아래의 3줄을 추가하면 된다. if ($http_cf_visitor ~ &#39;{&#34;scheme&#34;:&#34;http&#34;}&#39;) { return 301 https://$server_name$request_uri; } Let&#39;s Encrypt를 사용하는 정도의 방법이 있긴 한데, Cloudflare를 사용한다면 위의 방법이 보다 편리하고 나은 선택이 될 수 있다. 인증기간도 더 길고, Nginx 환경설정 파일의 코드 3줄이면 끝나니까. 아래의 ..." />
 
 	<!-- CSS Components -->
 	<link rel="stylesheet" type="text/css" href="../theme/bower_components/bootstrap/dist/css/bootstrap.min.css"/>
@@ -27,6 +29,7 @@
 
 
 
+	<link href="../feeds/dev.atom.xml" type="application/atom+xml" rel="alternate" title="CHANN Wiki Dev ATOM Feed"/>
 </head>
 <body>
 <!-- GNB -->
@@ -57,42 +60,106 @@ CHANN Wiki			</a>
 <!-- //GNB -->
 <!-- breadcrumbs -->
 <div class="breadcrumbs">
-    <ol class="breadcrumb">
-        <li><a href=".." title="CHANN Wiki"><i class="xi-home"></i></a></li>
-        <li><a href="../tags" title="Tags">Tags</a></li>
-        <li class="active">server</li>
-    </ol>
+            <ol class="breadcrumb">
+                <li><a href=".." title="CHANN Wiki"><i class="xi-home"></i></a></li>
+                <li><a href="../dev/index" title="Dev">Dev</a></li>
+                <li class="active">Nginx와 Cloudflare를 이용하여 SSL-Only 설정하기</li>
+            </ol>
 </div>
 <!-- banner -->
 <div class="container">
 	<div class="wrap row">
 		<div class="col-sm-9">
-            <article>
-                <h2><a href="../dev/ssl-only-nginx-cloudflare">Nginx와 Cloudflare를 이용하여 SSL-Only 설정하기</a></h2>
-                <div class="summary"><!--Summary: -->
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="../dev/ssl-only-nginx-cloudflare"
+                       rel="bookmark"
+                       title="Permalink to Nginx와 Cloudflare를 이용하여 SSL-Only 설정하기">
+                        Nginx와 Cloudflare를 이용하여 SSL-Only 설정하기
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2015-12-31T20:00:00+09:00"> Thu 31 December 2015</time>
+    </span>
+
+
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="../tag/dev">dev</a>
+        /
+	<a href="../tag/server">server</a>
+        /
+	<a href="../tag/nginx">nginx</a>
+        /
+	<a href="../tag/ssl">ssl</a>
+        /
+	<a href="../tag/secure">secure</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <!--Summary: -->
 <p>아주 간단하다. <code>sites-enabled</code>에 링크해 둔 Nginx 환경설정파일에 아래의 3줄을 추가하면 된다.</p>
 <div class="highlight"><pre><span class="k">if</span> <span class="s">(</span><span class="nv">$http_cf_visitor</span> <span class="p">~</span> <span class="sr">'</span><span class="p">{</span><span class="kn">"scheme":"http"}')</span> <span class="p">{</span>
   <span class="kn">return</span> <span class="mi">301</span> <span class="s">https://</span><span class="nv">$server_name$request_uri</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 <p>Let's Encrypt를 사용하는 정도의 방법이 있긴 한데, Cloudflare를 사용한다면 위의 방법이 보다 편리하고 나은 선택이 될 수 있다. 인증기간도 더 길고, Nginx 환경설정 파일의 코드 3줄이면 끝나니까.</p>
-<p>아래의 ...</p></!--summary:>
-                    <a class="btn btn-default btn-xs" href="../dev/ssl-only-nginx-cloudflare">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="../dev/django-static-page-guide">django 정적 페이지 만드는 법</a></h2>
-                <div class="summary"><!--Summary: -->
-<blockquote>
-<p>작성중입니다.</p>
-</blockquote>
-<p>django에서 정적 페이지를 만들 땐 아래의 문서를 참조하자.</p>
-<p><a href="https://docs.djangoproject.com/en/1.9/ref/contrib/flatpages/">django 1.9 버전 공식 문서</a></p>
-                    <a class="btn btn-default btn-xs" href="../dev/django-static-page-guide">more ...</a>
-                </div>
-            </article>
-            <hr/>
+<p>아래의 참고링크를 누르면 Apache 웹서버에서의 방법도 적혀있다. Nginx에서도 rewrite 룰을 적용해서 SSL-Only를 시도해봤는데, 무한 인다이렉션이 떠서 실패했음. Cloudflare 서비스 방식을 살펴보면 왜 그랬는지는 이해가 간다.</p>
+<hr/>
+<h2>참고</h2>
+<ol>
+<li><a href="https://support.cloudflare.com/hc/en-us/articles/200170536-How-do-I-redirect-all-visitors-to-HTTPS-SSL-">Cloudflare 공식 도움말</a></li>
+</ol>
+            </div>
+            <!-- /.entry-content -->
+<section class="well" id="related-posts">
+    <h4>Related Posts:</h4>
+    <ul>
+        <li><a href="../dev/django-static-page-guide">django 정적 페이지 만드는 법</a></li>
+    </ul>
+</section>
+    <hr/>
+    <section class="comments" id="comments">
+        <h2>Comments</h2>
+
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'chann-wiki'; // required: replace example with your forum shortname
+
+                    var disqus_identifier = 'ssl-only-nginx-cloudflare';
+                var disqus_url = '../dev/ssl-only-nginx-cloudflare';
+
+            var disqus_config = function () {
+                this.language = "ko";
+            };
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </section>
+        </article>
+    </section>
 
 		</div>
 		<div class="col-sm-3" id="sidebar">
