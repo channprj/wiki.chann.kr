@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-	<title>Search - CHANN Wiki
-</title>
+	<title>posts - CHANN Wiki</title>
 	<!-- Using the latest rendering mode for IE -->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta charset="utf-8">
@@ -11,29 +10,31 @@
 
 
 
-		<meta name="author" content="CHANN" />
+    <meta name="author" content="CHANN" />
+    <meta name="keywords" content="posts" />
 
 	<!-- CSS Components -->
-	<link rel="stylesheet" type="text/css" href="./theme/bower_components/bootstrap/dist/css/bootstrap.min.css"/>
-	<link rel="stylesheet" type="text/css" href="./theme/bower_components/xeicon/xeicon.min.css">
-	<link rel="stylesheet" type="text/css" href="./theme/css/pygment.css"/>
+	<link rel="stylesheet" type="text/css" href="../theme/bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="../theme/bower_components/xeicon/xeicon.min.css">
+	<link rel="stylesheet" type="text/css" href="../theme/css/pygment.css"/>
 	<!-- <link rel="stylesheet" type="text/css" href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css"> -->
 	<link rel="stylesheet" type="text/css" href="https://blog.chann.kr/assets/css/bigfoot-number.css">
 	
 	<!-- CSS -->
-	<link rel="stylesheet" type="text/css" href="./theme/css/base.css"/>
+	<link rel="stylesheet" type="text/css" href="../theme/css/base.css"/>
 
-	<link href="./feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="CHANN Wiki ATOM Feed"/>
+	<link href="../feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="CHANN Wiki ATOM Feed"/>
 
 
 
+	<link href="../feeds/posts.atom.xml" type="application/atom+xml" rel="alternate" title="CHANN Wiki posts ATOM Feed"/>
 </head>
 <body>
 <!-- GNB -->
 <div class="navbar navbar-inverse" role="navigation">
 	<div class="gnb container">
 		<div class="navbar-header">
-			<a href="./" class="navbar-brand">
+			<a href="../" class="navbar-brand">
 CHANN Wiki			</a>
 		</div>
 		<div class="collapse navbar-collapse navbar-ex1-collapse">
@@ -45,11 +46,11 @@ CHANN Wiki			</a>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li><a href="https://github.com/channprj"><i class="gnb-xeicon xi-github"></i></a></li>
-				<li><a href="./about"><i class="gnb-xeicon xi-unknown-circle"></i></a></li>
-				<li><a href="./archives"><i class="gnb-xeicon xi-archive"></i><!-- <span class="icon-label"></span> --></a></li>
-				<li><a href="./categories"><i class="gnb-xeicon xi-sitemap"></i></a></li>
-				<li><a href="./tags"><i class="gnb-xeicon xi-tags"></i></a></li>
-				<li><a href="./search"><i class="gnb-xeicon xi-magnifier"></i></a></li>
+				<li><a href="../about"><i class="gnb-xeicon xi-unknown-circle"></i></a></li>
+				<li><a href="../archives"><i class="gnb-xeicon xi-archive"></i><!-- <span class="icon-label"></span> --></a></li>
+				<li><a href="../categories"><i class="gnb-xeicon xi-sitemap"></i></a></li>
+				<li><a href="../tags"><i class="gnb-xeicon xi-tags"></i></a></li>
+				<li><a href="../search"><i class="gnb-xeicon xi-magnifier"></i></a></li>
 			</ul>
 		</div>
 	</div>
@@ -57,25 +58,51 @@ CHANN Wiki			</a>
 <!-- //GNB -->
 <!-- breadcrumbs -->
 <div class="breadcrumbs">
+    <ol class="breadcrumb">
+        <li><a href=".." title="CHANN Wiki"><i class="xi-home"></i></a></li>
+        <li><a href="../categories" title="CHANN Wiki Categories">Categories</a></li>
+        <li class="active">posts</li>
+    </ol>
 </div>
 <!-- banner -->
 <div class="container">
 	<div class="wrap row">
 		<div class="col-sm-9">
-<div id="tipue_search_content"></div>
-<script>
-  (function() {
-    var cx = '008786403800651693027:pl-mhfxks58';
-    var gcse = document.createElement('script');
-    gcse.type = 'text/javascript';
-    gcse.async = true;
-    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
-        '//cse.google.com/cse.js?cx=' + cx;
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(gcse, s);
-  })();
-</script>
-<gcse:search></gcse:search>
+            <article>
+                <h2><a href="../posts/python-variable-operator">파이썬 자료형, 연산자 기초</a></h2>
+                <div class="summary"><h1>파이썬 자료형, 연산자 기초</h1>
+<blockquote>
+<p>작성중</p>
+</blockquote>
+<h2>특징</h2>
+<ul>
+<li>인터프리터 언어</li>
+<li>가독성이 좋음</li>
+<li>접착성이 좋음(풀 언어(glue language)라고도 부름)</li>
+<li>무료</li>
+<li>방대한 오픈소스</li>
+<li>유니코드 기반</li>
+<li>동적 타이핑</li>
+</ul>
+<hr/>
+<h2>2.x와 3.x의 차이</h2>
+<blockquote>
+<p>작성중</p>
+</blockquote>
+<ul>
+<li>print 함수 형태 변경</li>
+<li>int 형으로 통일됨</li>
+<li>하지만 나누기 결과는 float</li>
+<li>3.x는 문자열 기본 인코딩이 유니코드</li>
+</ul>
+<hr/>
+<h2>설치법</h2>
+<h3>윈도우 ...</h3></hr/></hr/>
+                    <a class="btn btn-default btn-xs" href="../posts/python-variable-operator">more ...</a>
+                </div>
+            </article>
+            <hr/>
+
 		</div>
 		<div class="col-sm-3" id="sidebar">
 			<aside>
@@ -130,11 +157,11 @@ CHANN Wiki			</a>
    </div>
 </footer>
 <!-- JS Components -->
-<script type="text/javascript" src="./theme/bower_components/jquery/dist/jquery.min.js"></script>
-<script type="text/javascript" src="./theme/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../theme/bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="../theme/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="https://blog.chann.kr/assets/js/bigfoot.min.js"></script>
 <script type="text/javascript">$.bigfoot();</script>
-<!-- <script src="./theme/js/prism.js"></script> -->
+<!-- <script src="../theme/js/prism.js"></script> -->
 
     <!-- GitHub JS -->
     <script type="text/javascript">
@@ -142,7 +169,7 @@ CHANN Wiki			</a>
             if (!window.jXHR) {
                 var jxhr = document.createElement('script');
                 jxhr.type = 'text/javascript';
-                jxhr.src = './theme/js/jXHR.js';
+                jxhr.src = '../theme/js/jXHR.js';
                 var s = document.getElementsByTagName('script')[0];
                 s.parentNode.insertBefore(jxhr, s);
             }
@@ -155,7 +182,7 @@ CHANN Wiki			</a>
             });
         });
     </script>
-    <script src="./theme/js/github.js" type="text/javascript"></script>
+    <script src="../theme/js/github.js" type="text/javascript"></script>
     <!-- End GitHub JS Code -->
     <!-- Disqus -->
     <script type="text/javascript">
@@ -173,17 +200,5 @@ CHANN Wiki			</a>
     </script>
     <!-- End Disqus Code -->
 
-    <script type="text/javascript" src="./theme/tipuesearch/tipuesearch_set.js"></script>
-    <script type="text/javascript" src="./theme/tipuesearch/tipuesearch.min.js"></script>
-    <script>
-    $(document).ready(function() {
-      $('#tipue_search_input').tipuesearch({
-        'mode' : 'json',
-        'show': 10,
-        'newWindow': false,
-        'contentLocation': 'tipuesearch_content.json'
-      });
-    });
-    </script>
 </body>
 </html>
