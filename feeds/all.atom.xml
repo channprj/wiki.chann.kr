@@ -1,5 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>CHANN Wiki</title><link href="http://wiki.chann.kr/" rel="alternate"></link><link href="http://wiki.chann.kr/feeds/all.atom.xml" rel="self"></link><id>http://wiki.chann.kr/</id><updated>2016-01-04T20:12:00+09:00</updated><entry><title>파이썬 자료형, 연산자 기초</title><link href="http://wiki.chann.kr/python/python-variable-operator" rel="alternate"></link><updated>2016-01-04T20:12:00+09:00</updated><author><name>CHANN</name></author><id>tag:wiki.chann.kr,2016-01-04:python/python-variable-operator</id><summary type="html">&lt;h1&gt;파이썬 자료형, 연산자 기초&lt;/h1&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>CHANN Wiki</title><link href="http://wiki.chann.kr/" rel="alternate"></link><link href="http://wiki.chann.kr/feeds/all.atom.xml" rel="self"></link><id>http://wiki.chann.kr/</id><updated>2016-01-25T21:12:00+09:00</updated><entry><title>zsh에서 vim 명령어 자동완성 오류</title><link href="http://wiki.chann.kr/python/ohmyzsh-autocomplete-bug-fix" rel="alternate"></link><updated>2016-01-25T21:12:00+09:00</updated><author><name>CHANN</name></author><id>tag:wiki.chann.kr,2016-01-25:python/ohmyzsh-autocomplete-bug-fix</id><summary type="html">&lt;!--Summary: --&gt;
+&lt;p&gt;갑자기 &lt;code&gt;vim&lt;/code&gt; 을 입력하고 tab을 누르니 &lt;code&gt;_arguments:450: _vim_files: function definition file not found&lt;/code&gt; 라는 오류메시지가 떴다. 구글링을 해 보니 홈 폴더에서 &lt;code&gt;.zcompdump*&lt;/code&gt; 파일을 지우면 대체로 잔버그가 해결된다는 답변&lt;sup id="fnref:1"&gt;&lt;a class="footnote-ref" href="#fn:1" rel="footnote"&gt;1&lt;/a&gt;&lt;/sup&gt;에 꽤나 힘이 실려있었는데, 이번 경우에는 좀처럼 통하지 않았다.  알고 보니 &lt;code&gt;exec zsh&lt;/code&gt; 해야 해결되었다. 아무 생각 없이 &lt;code&gt;source .zshrc&lt;/code&gt; 를 치고 '어... 왜 안 고쳐지지?' 헤맸던 내가 바보같다... dotfile 은 환경설정이거늘 ㅠㅠ&lt;/p&gt;
+&lt;h2&gt;정리&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;rm ~/.zcompdump*
+&lt;span class="nv"&gt;$ &lt;/span&gt;&lt;span class="nb"&gt;exec &lt;/span&gt;zsh
+&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="footnote"&gt;
+&lt;hr/&gt;
+&lt;ol&gt;
+&lt;li id="fn:1"&gt;
+&lt;p&gt;oh-my-zsh 버전이 올라갈 때마다 잔버그가 자주 나타나는 모양이다. &lt;a class="footnote-backref" href="#fnref:1" rev="footnote" title="Jump back to footnote 1 in the text"&gt;↩&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;</summary><category term="zsh"></category><category term="shell"></category><category term="terminal"></category><category term="cli"></category><category term="sh"></category><category term="ohmyzsh"></category><category term="bug"></category><category term="fix"></category></entry><entry><title>프로그래밍 공부 사이트 정리</title><link href="http://wiki.chann.kr/study/programming-study-site-list" rel="alternate"></link><updated>2016-01-20T16:32:00+09:00</updated><author><name>CHANN</name></author><id>tag:wiki.chann.kr,2016-01-20:study/programming-study-site-list</id><summary type="html">&lt;!--Summary: --&gt;
+&lt;h1&gt;&lt;a href="https://blog.chann.kr/link"&gt;https://blog.chann.kr/link&lt;/a&gt; 로 대체.&lt;/h1&gt;</summary><category term="study"></category><category term="programming"></category><category term="dev"></category><category term="favorite"></category></entry><entry><title>Git 한글 깨짐문제</title><link href="http://wiki.chann.kr/vcs/git-ko-path-name-fix" rel="alternate"></link><updated>2016-01-20T14:28:00+09:00</updated><author><name>CHANN</name></author><id>tag:wiki.chann.kr,2016-01-20:vcs/git-ko-path-name-fix</id><summary type="html">&lt;!--Summary: --&gt;
+&lt;p&gt;인코딩 문제. 아래 한 줄이면 된다.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;git config core.quotepath &lt;span class="nb"&gt;false&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;hr/&gt;
+&lt;h2&gt;참고&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="https://kldp.org/node/132431"&gt;KLDP 글&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</summary><category term="vcs"></category><category term="git"></category><category term="i18n"></category><category term="github"></category><category term="terminal"></category><category term="cli"></category></entry><entry><title>Bower 사용법</title><link href="http://wiki.chann.kr/bower/how-to-use-bower" rel="alternate"></link><updated>2016-01-15T20:12:00+09:00</updated><author><name>CHANN</name></author><id>tag:wiki.chann.kr,2016-01-15:bower/how-to-use-bower</id><summary type="html">&lt;!--Summary: --&gt;
+&lt;p&gt;&lt;a href="http://bower.io"&gt;Bower&lt;/a&gt; 는 웹을 위한 패키지 관리도구다. 트위터에서 개발하였고, 웹 개발시 자주 쓰이는 라이브러리를 쉽고 간편하게 관리할 수 있다. &lt;code&gt;npm&lt;/code&gt;, &lt;code&gt;pip&lt;/code&gt;, &lt;code&gt;gem&lt;/code&gt; 과는 다르게 '웹 패키지 관리도구'라서 특정 언어의 종속성을 가지고 있지 않다. 개인적으로 느낀 장단점은 아래와 같다.&lt;/p&gt;
+&lt;h2&gt;장점&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;패키지 설치 및 버전 관리, 의존성 관리 용이&lt;/li&gt;
+&lt;li&gt;HTML, CSS, JS, Font, Image 파일 등의 최적화된 패키지&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;단점&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;패키지 설치장소 변경 불가, 패키지 디렉토리가 깔끔하지 않음.&lt;br/&gt;
+(예시: ~/project/bower_components/bootstrap/dist/js)&lt;/li&gt;
+&lt;li&gt;npm 에 의존적인 패키지 관리자. npm으로 bower를 설치 및 관리해야함.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr/&gt;
+&lt;h2&gt;사용법&lt;/h2&gt;
+&lt;h3&gt;Bower 설치&lt;/h3&gt;
+&lt;p&gt;아래와 같이 설치한다.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;npm install -g bower
+&lt;/pre&gt;&lt;/div&gt;
+&lt;hr/&gt;
+&lt;h3&gt;패키지 설치&lt;/h3&gt;
+&lt;p&gt;패키지 설치는 &lt;code&gt;npm&lt;/code&gt; 등 다른 패키지 관리도구와 비슷하다.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;bower install bootstrap
+&lt;/pre&gt;&lt;/div&gt;
+&lt;hr/&gt;
+&lt;h3&gt;패키지 검색&lt;/h3&gt;
+&lt;p&gt;아래와 같다.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;bower search bootstrap  &lt;span class="c"&gt;# bootstrap 패키지 전체 검색&lt;/span&gt;
+&lt;span class="nv"&gt;$ &lt;/span&gt;bower lookup bootstrap  &lt;span class="c"&gt;# bootstrap과 일치하는 패키지만 찾기&lt;/span&gt;
+&lt;span class="nv"&gt;$ &lt;/span&gt;bower info bootstrap  &lt;span class="c"&gt;# bootstrap의 버전 정보 확인&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;hr/&gt;
+&lt;h3&gt;패키지 버전, 의존성 관리&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;node.js&lt;/code&gt; 에서는 &lt;code&gt;package.json&lt;/code&gt; 으로 관리하는데, bower에서도 비슷하게 &lt;code&gt;bower.json&lt;/code&gt; 으로 관리를 한다.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;bower init  &lt;span class="c"&gt;# bower 패키지 정보를 저장&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;패키지 설치할 때, &lt;code&gt;--save&lt;/code&gt; 를 뒤에 붙여주면 설치하고 나서 &lt;code&gt;bower.json&lt;/code&gt;에 자동으로 기록해준다.&lt;/p&gt;
+&lt;hr/&gt;
+&lt;h2&gt;참고&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="http://bower.io"&gt;Bower 공식 홈페이지&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/bower/bower"&gt;Bower 저장소&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</summary><category term="dev"></category><category term="bower"></category><category term="package manager"></category><category term="tool"></category></entry><entry><title>파이썬 기초</title><link href="http://wiki.chann.kr/python/python-variable-operator" rel="alternate"></link><updated>2016-01-04T20:12:00+09:00</updated><author><name>CHANN</name></author><id>tag:wiki.chann.kr,2016-01-04:python/python-variable-operator</id><summary type="html">&lt;!--Summary: --&gt;
 &lt;blockquote&gt;
 &lt;p&gt;작성중&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -27,19 +91,15 @@
 &lt;hr/&gt;
 &lt;h2&gt;설치법&lt;/h2&gt;
 &lt;h3&gt;윈도우&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;작성중&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href="https://www.python.org/downloads/"&gt;파이썬 재단 홈페이지&lt;/a&gt; 참고.&lt;/p&gt;
 &lt;hr/&gt;
 &lt;h3&gt;맥&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;작성중&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;맥에는 기본적으로 2.7.10이 내장되어 있다. 가급적 3.x 이상의 버전을 사용하라고 권고하고 있으니 따로 설치만 해주면 된다.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.python.org/downloads/"&gt;파이썬 재단 홈페이지&lt;/a&gt; 참고.&lt;/p&gt;
 &lt;hr/&gt;
 &lt;h3&gt;리눅스&lt;/h3&gt;
-&lt;blockquote&gt;
-&lt;p&gt;작성중&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;apt-get&lt;/code&gt;, &lt;code&gt;yum&lt;/code&gt; 등 별도의 패키지 관리도구를 이용해서 설치하면 된다.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.python.org/downloads/"&gt;파이썬 재단 홈페이지&lt;/a&gt; 참고.&lt;/p&gt;
 &lt;hr/&gt;
 &lt;h2&gt;변수명&lt;/h2&gt;
 &lt;p&gt;변수명은 문자, 숫자, 언더바(_)를 포함 가능하지만 숫자가 먼저 올 수 없다.&lt;/p&gt;
@@ -197,29 +257,169 @@
 &lt;/pre&gt;&lt;/div&gt;
 &lt;hr/&gt;
 &lt;h2&gt;세트&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;작성중&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;수학에서의 집합과 동일. 데이터의 순서는 없음.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;# 변수 선언&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;set&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="c"&gt;# 세트 확인&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;set&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="c"&gt;# 타입 확인&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;type&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;set&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="nc"&gt;set&lt;/span&gt;&lt;span class="s"&gt;'&amp;gt;&lt;/span&gt;
+
+&lt;span class="c"&gt;# 합집합&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;  &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;union&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="c"&gt;# 교집합&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;intersection&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="c"&gt;# 기타 집합 연산자&lt;/span&gt;
+&lt;span class="c"&gt;## 차집합&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;
+
+&lt;span class="c"&gt;## 합집합&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;
+
+&lt;span class="c"&gt;## 교집합&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;hr/&gt;
 &lt;h2&gt;튜플&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;작성중&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;p&gt;리스트와는 다르게 ()로 묶어서 표현. 주로 읽기 전용으로 쓰이기 때문에 제공되는 함수는 적지만 그만큼 속도가 빠름.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;tuple&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;type&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;tuple&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="nc"&gt;tuple&lt;/span&gt;&lt;span class="s"&gt;'&amp;gt;&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="nb"&gt;tuple&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c"&gt;# 튜플을 이용한 Swap 응용. 임시 변수가 필요 없음.&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="c"&gt;# 튜플 내부 값 확인&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;
+&lt;span class="bp"&gt;True&lt;/span&gt;
+
+&lt;span class="c"&gt;# 리스트, 세트, 튜플은 list(), set(), tuple()의 함수를 이용해 서로 언제든지 변환 가능.&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;tuple&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;hr/&gt;
 &lt;h2&gt;사전&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;작성중&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;키와 값의 쌍으로 구성된 자료구조. 키와 값 이외의 인덱스는 지원하지 않음.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;dictionary&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;dict&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;d&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;dictionary&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s"&gt;'a'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;'c'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;'d'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;'b'&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="c"&gt;# dict() 생성자 없이 생성 가능&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;size&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="s"&gt;"s"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="s"&gt;"small"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;"m"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="s"&gt;"medium"&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;"l"&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="s"&gt;"large"&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;size&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;"l"&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="s"&gt;'large'&lt;/span&gt;
+
+&lt;span class="c"&gt;# 사전의 내용은 items(), keys(), values() 함수로 받아옴&lt;/span&gt;
+&lt;span class="c"&gt;## items()&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;z&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;size&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;items&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;z&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;'s'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;'small'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;'l'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;'large'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;'m'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;'medium'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;z&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;size&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;items&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;z&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;
+&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="n"&gt;small&lt;/span&gt;
+&lt;span class="n"&gt;l&lt;/span&gt; &lt;span class="n"&gt;large&lt;/span&gt;
+&lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="n"&gt;medium&lt;/span&gt;
+
+&lt;span class="c"&gt;## keys()&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;z&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;size&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;keys&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;z&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;
+&lt;span class="n"&gt;s&lt;/span&gt;
+&lt;span class="n"&gt;l&lt;/span&gt;
+&lt;span class="n"&gt;m&lt;/span&gt;
+
+&lt;span class="c"&gt;## values()&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;z&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;size&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;values&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;     &lt;span class="k"&gt;print&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;z&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;...&lt;/span&gt;
+&lt;span class="n"&gt;small&lt;/span&gt;
+&lt;span class="n"&gt;large&lt;/span&gt;
+&lt;span class="n"&gt;medium&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;hr/&gt;
 &lt;h2&gt;논리연산자&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;작성중&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&amp;gt;&amp;gt;&amp;gt; 1 &amp;gt; 2
+False
+
+&amp;gt;&amp;gt;&amp;gt; 1 != 2
+True
+
+&amp;gt;&amp;gt;&amp;gt; 1 == 1
+True
+
+&amp;gt;&amp;gt;&amp;gt; True &amp;amp; True
+True
+
+&amp;gt;&amp;gt;&amp;gt; True | False
+True
+
+&amp;gt;&amp;gt;&amp;gt; True or False
+True
+
+&amp;gt;&amp;gt;&amp;gt; not False
+True
+
+&amp;gt;&amp;gt;&amp;gt; bool(1)
+True
+
+&amp;gt;&amp;gt;&amp;gt; bool("Good")
+True
+
+&amp;gt;&amp;gt;&amp;gt; bool(None)
+False
+&lt;/pre&gt;&lt;/div&gt;
 &lt;hr/&gt;
 &lt;h2&gt;얕은 복사, 깊은 복사&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;작성중&lt;/p&gt;
-&lt;/blockquote&gt;</summary><category term="python"></category><category term="programming"></category></entry><entry><title>Nginx와 Cloudflare를 이용하여 SSL-Only 설정하기</title><link href="http://wiki.chann.kr/dev/ssl-only-nginx-cloudflare" rel="alternate"></link><updated>2015-12-31T20:00:00+09:00</updated><author><name>CHANN</name></author><id>tag:wiki.chann.kr,2015-12-31:dev/ssl-only-nginx-cloudflare</id><summary type="html">&lt;!--Summary: --&gt;
+&lt;p&gt;모든 변수는 객체의 주소를 가짐. &lt;/p&gt;
+&lt;h3&gt;얕은복사&lt;/h3&gt;
+&lt;p&gt;아래 예시에서 &lt;code&gt;b = a&lt;/code&gt; 의 경우, a가 가리키는 객체의 주소를 b에 복사한 것. 이해가 안 된다면, &lt;code&gt;id()&lt;/code&gt; 함수를 사용하여 객체의 고유값을 확인해보자.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;'a'&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;'a'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;
+&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;'a'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code&gt;copy()&lt;/code&gt; 함수를 사용하면 주소가 복사되어 객체를 공유하는 앝은 복사(shallow copy)가 됨. 일반적으로 생각하는 '참조'의 개념과 같음.&lt;/p&gt;
+&lt;h3&gt;깊은복사&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;deepcopy()&lt;/code&gt; 함수를 사용하면 객체를 공유하지 않는 깊은 복사(deep copy)가 됨. 일반적으로 생각하는 '복사'의 개념과 같음.&lt;/p&gt;
+&lt;hr/&gt;
+&lt;h2&gt;함수&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;Test&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;파이썬에서는 함수도 객체다. &lt;code&gt;def&lt;/code&gt; 는 함수를 만드는 구문이다. Test 라는 이름은 생성된 함수 객체를 참조하는 레퍼런스다. 메모리 어딘가에 함수 객체가 생성되는 것이고, 객체이기 때문에 생성할 때마다 다른 주소값을 가진다.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;return&lt;/code&gt;에서는 함수를 종료하고, 해당 함수를 호출한 곳으로 다시 되돌아간다. 객체를 되돌려준다. &lt;code&gt;return&lt;/code&gt;을 적지 않아도, &lt;code&gt;return&lt;/code&gt;만 적어도 종료되며, 이때 반환값은 None이다.&lt;/p&gt;</summary><category term="python"></category><category term="programming"></category><category term="dev"></category><category term="scrpit"></category></entry><entry><title>Nginx와 Cloudflare를 이용하여 SSL-Only 설정하기</title><link href="http://wiki.chann.kr/dev/ssl-only-nginx-cloudflare" rel="alternate"></link><updated>2015-12-31T20:00:00+09:00</updated><author><name>CHANN</name></author><id>tag:wiki.chann.kr,2015-12-31:dev/ssl-only-nginx-cloudflare</id><summary type="html">&lt;!--Summary: --&gt;
 &lt;p&gt;아주 간단하다. &lt;code&gt;sites-enabled&lt;/code&gt;에 링크해 둔 Nginx 환경설정파일에 아래의 3줄을 추가하면 된다.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="s"&gt;(&lt;/span&gt;&lt;span class="nv"&gt;$http_cf_visitor&lt;/span&gt; &lt;span class="p"&gt;~&lt;/span&gt; &lt;span class="sr"&gt;'&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="kn"&gt;"scheme":"http"}')&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
   &lt;span class="kn"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;301&lt;/span&gt; &lt;span class="s"&gt;https://&lt;/span&gt;&lt;span class="nv"&gt;$server_name$request_uri&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
