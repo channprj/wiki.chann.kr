@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>CHANN Wiki</title><link href="http://wiki.chann.kr/" rel="alternate"></link><link href="http://wiki.chann.kr/feeds/pelican.atom.xml" rel="self"></link><id>http://wiki.chann.kr/</id><updated>2015-11-21T22:20:00+09:00</updated><entry><title>Pelican 설치 가이드</title><link href="http://wiki.chann.kr/pelican/how-to-install-pelican" rel="alternate"></link><updated>2015-11-21T22:20:00+09:00</updated><author><name>CHANN</name></author><id>tag:wiki.chann.kr,2015-11-21:pelican/how-to-install-pelican</id><summary type="html">&lt;blockquote&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>CHANN Wiki</title><link href="https://wiki.chann.kr/" rel="alternate"></link><link href="https://wiki.chann.kr/feeds/pelican.atom.xml" rel="self"></link><id>https://wiki.chann.kr/</id><updated>2015-11-21T22:20:00+09:00</updated><entry><title>Pelican 설치 가이드</title><link href="https://wiki.chann.kr/pelican/how-to-install-pelican" rel="alternate"></link><updated>2015-11-21T22:20:00+09:00</updated><author><name>CHANN</name></author><id>tag:wiki.chann.kr,2015-11-21:pelican/how-to-install-pelican</id><summary type="html">&lt;blockquote&gt;
 &lt;p&gt;작성중&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;CHANN@CHANN-Macbook:~/git/channprj.github.io&lt;span class="o"&gt;(&lt;/span&gt;master○&lt;span class="o"&gt;)&lt;/span&gt; » git config user.name &lt;span class="s2"&gt;"channprj"&lt;/span&gt;
@@ -32,7 +32,7 @@ needed by Pelican.
 &amp;gt; Do you want to upload your website using GitHub Pages? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; y
 &amp;gt; Is this your personal page &lt;span class="o"&gt;(&lt;/span&gt;username.github.io&lt;span class="o"&gt;)&lt;/span&gt;? &lt;span class="o"&gt;(&lt;/span&gt;y/N&lt;span class="o"&gt;)&lt;/span&gt; y
 Done. Your new project is available at /Users/CHANN/git/channprj.github.io
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="pelican"></category><category term="tutorial"></category><category term="github"></category></entry><entry><title>Pelican에서 글 쓰는 법</title><link href="http://wiki.chann.kr/pelican/how-to-write-on-pelican" rel="alternate"></link><updated>2015-11-18T17:27:00+09:00</updated><author><name>CHANN</name></author><id>tag:wiki.chann.kr,2015-11-18:pelican/how-to-write-on-pelican</id><summary type="html">&lt;p&gt;Pelican에서 글을 쓰는 건 간단하다.&lt;/p&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="pelican"></category><category term="tutorial"></category><category term="github"></category></entry><entry><title>Pelican에서 글 쓰는 법</title><link href="https://wiki.chann.kr/pelican/how-to-write-on-pelican" rel="alternate"></link><updated>2015-11-18T17:27:00+09:00</updated><author><name>CHANN</name></author><id>tag:wiki.chann.kr,2015-11-18:pelican/how-to-write-on-pelican</id><summary type="html">&lt;p&gt;Pelican에서 글을 쓰는 건 간단하다.&lt;/p&gt;
 &lt;h2&gt;작성법&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;├── LICENSE
 ├── Makefile
